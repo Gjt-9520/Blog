@@ -1,10 +1,10 @@
 ---
-title: "小黑子"
-description: "This post is for testing the draft post functionality"
-publishDate: "10 Sept 2023"
-tags: ["java", "linux"]
+title: "Linux_Vim_使用手册"
+description: "介绍Linux终端如何修改文件内容"
+publishDate: "3 Nov 2023"
+tags: ["linux", "vim"]
 ---
-## 小黑子
+
 ## Linux终端修改文件内容基本流程  
 ①打开终端并进入要编辑的文件所在的目录  
 ②输入命令`vim 文件名`打开文件  
@@ -13,7 +13,7 @@ tags: ["java", "linux"]
 ⑤编辑完成后,按下`Esc`键退出输入模式  
 ⑥输入`:wq`保存并退出文件  
 
-### 命令模式  
+## 命令模式  
 输入`vim 文件名`进入命令模式  
 此状态下敲击键盘动作会被Vim视为命令,而非输入字符   
 - `i` -- 切换到输入模式,在光标当前位置开始输入文本  
@@ -32,7 +32,7 @@ tags: ["java", "linux"]
 - `:q` -- 退出Vim编辑器  
 - `:q!` -- 强制退出Vim编辑器,不保存修改  
 
-### 输入模式  
+## 输入模式  
 在命令模式下按下`i`就进入了输入模式  
 使用`Esc`键可以返回到命令模式  
 - `字符按键以及Shift组合` -- 输入字符  
@@ -45,7 +45,7 @@ tags: ["java", "linux"]
 - `Insert` -- 切换光标为输入/替换模式,光标将变成竖线/下划线  
 - `Esc` -- 退出输入模式,切换到命令模式  
 
-### 底线命令模式  
+## 底线命令模式  
 在命令模式下按下`:`就进入了底线命令模式  
 按`Esc`键可随时退出底线命令模式  
 - `:w` -- 保存文件   

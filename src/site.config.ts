@@ -3,7 +3,7 @@ import type { SiteConfig } from "@/types";
 export const siteConfig: SiteConfig = {
 	author: "Gujintao",
 	title: "今朝博客",
-	description: "",
+	description: "blog",
 	lang: "zh-CN",
 	ogLocale: "zh-CN",
 	date: {
