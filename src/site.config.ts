@@ -22,7 +22,7 @@ export const siteConfig: SiteConfig = {
 export const menuLinks: Array<{ title: string; path: string }> = [
 
 	{
-		title: "最新提交",
+		title: "最近更新",
 		path: "/",
 	},
 	{
