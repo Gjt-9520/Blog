@@ -12,5 +12,6 @@ tags: ["images","花"]
 ![68](https://github.com/Gjt-9520/Image_Resources/raw/main/blog_images/blog-placeholder-68.jpg)
 ![69](https://github.com/Gjt-9520/Image_Resources/raw/main/blog_images/blog-placeholder-69.jpg)
 ![70](https://github.com/Gjt-9520/Image_Resources/raw/main/blog_images/blog-placeholder-70.jpg)
+![71](https://github.com/Gjt-9520/Image_Resources/raw/main/blog_images/blog-placeholder-71.jpg)
 ![73](https://github.com/Gjt-9520/Image_Resources/raw/main/blog_images/blog-placeholder-73.jpg)
 ![74](https://github.com/Gjt-9520/Image_Resources/raw/main/blog_images/blog-placeholder-74.jpg)

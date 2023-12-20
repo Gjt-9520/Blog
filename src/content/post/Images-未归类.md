@@ -12,4 +12,3 @@ tags: ["images","未归类"]
 ![53](https://github.com/Gjt-9520/Image_Resources/raw/main/blog_images/blog-placeholder-53.jpg)
 ![59](https://github.com/Gjt-9520/Image_Resources/raw/main/blog_images/blog-placeholder-59.jpg)
 ![60](https://github.com/Gjt-9520/Image_Resources/raw/main/blog_images/blog-placeholder-60.jpg)
-![71](https://github.com/Gjt-9520/Image_Resources/raw/main/blog_images/blog-placeholder-71.jpg)
