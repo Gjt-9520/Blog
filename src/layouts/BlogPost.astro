@@ -59,7 +59,6 @@ const { headings } = await post.render();
 
 	function callback(entries: IntersectionObserverEntry[]) {
 		entries.forEach((entry) => {
-			// only show the scroll to top button when the heading is out of view
 			scrollBtn.dataset.show = (!entry.isIntersecting).toString();
 		});
 	}

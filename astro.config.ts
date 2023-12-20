@@ -5,14 +5,13 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import remarkUnwrapImages from "remark-unwrap-images";
 import rehypeExternalLinks from "rehype-external-links";
-import { remarkReadingTime } from "./src/utils/remark-reading-time";
 
-// https://astro.build/config
+
+
 export default defineConfig({
-	// ! Please remember to replace the following site property with your own domain
-	site: "https://astro-cactus.chriswilliams.dev/",
+	site: "https://gjt-blog.netlify.app/",
 	markdown: {
-		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
+		remarkPlugins: [remarkUnwrapImages],
 		rehypePlugins: [
 			[rehypeExternalLinks, { target: "_blank", rel: ["nofollow, noopener, noreferrer"] }],
 		],
@@ -45,8 +44,6 @@ export default defineConfig({
 function rawFonts(ext: Array<string>) {
 	return {
 		name: "vite-plugin-raw-fonts",
-		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-		// @ts-ignore:next-line
 		transform(_, id) {
 			if (ext.some((e) => id.endsWith(e))) {
 				const buffer = fs.readFileSync(id);

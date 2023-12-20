@@ -9,7 +9,6 @@ const validWebmentionTypes = ["like-of", "mention-of", "in-reply-to"];
 
 const hostName = new URL(DOMAIN).hostname;
 
-// Calls webmention.io api.
 async function fetchWebmentions(timeFrom: string | null, perPage = 1000) {
 	if (!DOMAIN) {
 		console.warn("No domain specified. Please set in astro.config.ts");
@@ -35,7 +34,6 @@ async function fetchWebmentions(timeFrom: string | null, perPage = 1000) {
 	return null;
 }
 
-// Merge cached entries [a] with fresh webmentions [b], merge by wm-id
 function mergeWebmentions(a: WebmentionsCache, b: WebmentionsFeed): WebmentionsChildren[] {
 	return Array.from(
 		[...a.children, ...b.children]
@@ -44,13 +42,9 @@ function mergeWebmentions(a: WebmentionsCache, b: WebmentionsFeed): WebmentionsC
 	);
 }
 
-// filter out WebmentionChildren
 export function filterWebmentions(webmentions: WebmentionsChildren[]) {
 	return webmentions.filter((webmention) => {
-		// make sure the mention has a property so we can sort them later
 		if (!validWebmentionTypes.includes(webmention["wm-property"])) return false;
-
-		// make sure 'mention-of' or 'in-reply-to' has text content.
 		if (webmention["wm-property"] === "mention-of" || webmention["wm-property"] === "in-reply-to") {
 			return webmention.content && webmention.content.text !== "";
 		}
@@ -59,16 +53,13 @@ export function filterWebmentions(webmentions: WebmentionsChildren[]) {
 	});
 }
 
-// save combined webmentions in cache file
 function writeToCache(data: WebmentionsCache) {
 	const fileContent = JSON.stringify(data, null, 2);
 
-	// create cache folder if it doesn't exist already
 	if (!fs.existsSync(CACHE_DIR)) {
 		fs.mkdirSync(CACHE_DIR);
 	}
 
-	// write data to cache json file
 	fs.writeFile(filePath, fileContent, (err) => {
 		if (err) throw err;
 		console.log(`Webmentions saved to ${filePath}`);
@@ -80,7 +71,6 @@ function getFromCache(): WebmentionsCache {
 		const data = fs.readFileSync(filePath, "utf-8");
 		return JSON.parse(data);
 	}
-	// no cache found
 	return {
 		lastFetched: null,
 		children: [],
@@ -95,7 +85,6 @@ async function getAndCacheWebmentions() {
 		mentions.children = filterWebmentions(mentions.children);
 		const webmentions: WebmentionsCache = {
 			lastFetched: new Date().toISOString(),
-			// Make sure the first arg is the cache
 			children: mergeWebmentions(cache, mentions),
 		};
 

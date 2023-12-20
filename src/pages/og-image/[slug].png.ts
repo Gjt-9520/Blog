@@ -12,7 +12,6 @@ import RobotoMonoBold from "@/assets/roboto-mono-700.ttf";
 const ogOptions: SatoriOptions = {
 	width: 1200,
 	height: 630,
-	// debug: true,
 	fonts: [
 		{
 			name: "Roboto Mono",

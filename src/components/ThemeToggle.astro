@@ -67,18 +67,13 @@
 			super();
 			this.button = this.querySelector("button") as HTMLButtonElement;
 			this.observer = null;
-
-			// set inital aria-pressed value
 			this.button.setAttribute("aria-pressed", String(rootHasDarkClass()));
-
-			// button clicked, fire event
 			this.button.addEventListener("click", this.handleThemeBtnClick);
 		}
 
 		connectedCallback() {
 			const root = document.documentElement;
 
-			// MutationObserver for html class changes, as the theme could be changed elsewhere
 			this.observer = new MutationObserver((mutationsList) => {
 				for (const mutation of mutationsList) {
 					if (mutation.type === "attributes" && mutation.attributeName === "class") {
@@ -96,14 +91,11 @@
 
 		handleThemeBtnClick = () => {
 			let isDark = rootHasDarkClass();
-
-			// invert theme
 			let themeChangeEvent = new CustomEvent("theme-change", {
 				detail: {
 					theme: isDark ? "light" : "dark",
 				},
 			});
-			// dispatch event -> ThemeProvider.astro
 			document.dispatchEvent(themeChangeEvent);
 		};
 	}

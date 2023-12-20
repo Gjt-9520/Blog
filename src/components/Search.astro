@@ -1,6 +1,4 @@
 ---
-// Heavy inspiration taken from Astro Starlight -> https://github.com/withastro/starlight/blob/main/packages/starlight/components/Search.astro
-
 import "@pagefind/default-ui/css/ui.css";
 ---
 
@@ -74,10 +72,7 @@ import "@pagefind/default-ui/css/ui.css";
 		}
 
 		connectedCallback() {
-			// Listen for keyboard shortcut
 			window.addEventListener("keydown", this.onWindowKeydown);
-
-			// only add pagefind in production
 			if (import.meta.env.DEV) return;
 			const onIdle = window.requestIdleCallback || ((cb) => setTimeout(cb, 1));
 			onIdle(async () => {
@@ -97,9 +92,7 @@ import "@pagefind/default-ui/css/ui.css";
 		}
 
 		onWindowClick = (event: MouseEvent) => {
-			// check if it's a link
 			const isLink = "href" in (event.target || {});
-			// make sure the click is either a link or outside of the dialog
 			if (
 				isLink ||
 				(document.body.contains(event.target as Node) &&
@@ -109,7 +102,6 @@ import "@pagefind/default-ui/css/ui.css";
 		};
 
 		onWindowKeydown = (e: KeyboardEvent) => {
-			// check if it's the / key
 			if (e.key === "/" && !this.dialog.open) {
 				this.openModal();
 				e.preventDefault();
