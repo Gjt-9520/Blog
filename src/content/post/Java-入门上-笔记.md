@@ -4,7 +4,7 @@ description: "Java入门"
 publishDate: "2023 12 20"
 tags: ["java"]
 ---
-## fadsfaf
+
 ## JVM
 定义:Java的虚拟机
 说明:JDK包含了JRE,JRE包含了JVM
