@@ -63,7 +63,7 @@ tags: ["git","terminal"]
 `' '` -- (空格)表示文件未发生更改  
 
 ## Git-add 和 Git-commit 工作流程图   
-![Git-add和Git-commit](https://github.com/Gjt-9520/Image_Resources/raw/main/markdown_images/Git_add%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg)
+![Git-add和Git-commit](https://github.com/Gjt-9520/Image_Resources/raw/main/markdown_images/Git-add%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg)
 
 ## 添加文件到暂存区
 git add指令,即跟踪文件   
