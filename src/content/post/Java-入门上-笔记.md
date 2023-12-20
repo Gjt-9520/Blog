@@ -1,7 +1,7 @@
 ---
-title: "Java_入门笔记上"
+title: "Java-入门上-笔记"
 description: "Java入门"
-publishDate: "2 Dec 2023"
+publishDate: "2023 12 5"
 tags: ["java"]
 ---
 ## fadsfaf

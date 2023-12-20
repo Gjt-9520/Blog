@@ -1,7 +1,7 @@
 ---
-title: "MarkDown_效果展示"
+title: "MarkDown-效果展示"
 description: "展示简单的MarkDown语法效果"
-publishDate: "1 Nov 2023"
+publishDate: "2023 11 1"
 tags: ["markdown"]
 ---
 
@@ -35,6 +35,6 @@ _倾斜2_
 
 ~~删除线~~  
 
-[超链接](链接地址)  
+[超链接](https://github.com/)  
 
 ![图片提示语](https://github.com/Gjt-9520/Image_Resources/raw/main/blog_images/blog-placeholder-1.jpg)

@@ -1,8 +1,8 @@
 ---
-title: "Linux_Terminal_使用手册"
+title: "Linux-Terminal-使用手册"
 description: "展示Linux终端常用命令"
-publishDate: "13 Nov 2023"
-tags: ["terminal", "linux"]
+publishDate: "2023 11 12"
+tags: ["terminal","linux"]
 ---
 
 ## 简称
