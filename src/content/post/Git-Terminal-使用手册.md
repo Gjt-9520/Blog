@@ -190,17 +190,19 @@ git push [-f] [--set-upstream] [本地分支]:[远端分支]
 `git push origin [本地分支]:[远端分支]` -- 推送本地分支到远端分支  
 `git push origin [本地分支]` -- 推送本地分支到远端分支(本地分支名和远端分支名相同)  
 
-`git push [--set-upstream] [branch]:[repository-branch]` -- 推送本地分支到远端分支,同时建立起本地分支与远端分支的关联联系  
+`git push [--set-upstream] [本地分支]:[远端分支]` -- 推送本地分支到远端分支,同时建立起本地分支与远端分支的关联联系  
 
 `git push` -- (当前分支已经和远端分支关联)推送到远端分支  
 
 `git push -u origin main` -- 将本地的main分支推送到远程仓库origin,并将本地的main分支与远程的main分支关联起来(如果远程仓库中已经存在一个main分支,则会将其覆盖)
 
 ## 从远程仓库(远端分支)中抓取  
-`git fetch [repository-name] [repository-branch]` -- 将远程仓库里的更新都抓取到本地,不会进行合并(如果不指定远端名称和远端分支,则抓取所有分支)  
+`git fetch [远程仓库名] [远端分支]` -- 将远程仓库里的更新都抓取到本地,不会进行合并(如果不指定远端名称和远端分支,则抓取所有分支)  
+远程仓库名默认是origin,取决于远端服务器设置  
 
 ## 从远程仓库(远端分支)中拉取  
-`git pull [repository-name] [repository-branch]` -- 将远程仓库里的修改都拉取到本地并自动进行合并,等同于 fetch + merge (如果不指定远端名称和远端分支,则拉取所有并更新当前分支)  
+`git pull [远程仓库名] [远端分支]` -- 将远程仓库里的修改都拉取到本地并自动进行合并,等同于 fetch + merge (如果不指定远端名称和远端分支,则拉取所有并更新当前分支)  
+远程仓库名默认是origin,取决于远端服务器设置   
 
 ## 解决冲突流程图 
 ![解决合并冲突](https://github.com/Gjt-9520/Image_Resources/raw/main/markdown_images/%E8%A7%A3%E5%86%B3%E5%90%88%E5%B9%B6%E5%86%B2%E7%AA%81.jpg)  
