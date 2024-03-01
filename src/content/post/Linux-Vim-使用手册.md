@@ -1,6 +1,6 @@
 ---
 title: "Linux-Vim-使用手册"
-description: 介绍Linux终端如何修改文件内容
+description: "介绍Linux终端如何修改文件内容"
 publishDate: "2023 12 16"
 tags: ["linux","vim"]
 ---
