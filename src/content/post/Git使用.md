@@ -62,7 +62,7 @@ push(推送):修改完成后,需要和团队成员共享代码时,将代码推�
 `U` -- 表示更新但未合并  
 `' '` -- (空格)表示文件未发生更改  
 
-## Git-add 和 Git-commit 工作流程图   
+## Git-add和Git-commit工作流程图   
 ![Git-add和Git-commit](https://github.com/Gjt-9520/Image_Resources/raw/main/markdown_images/Git-add%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg)
 
 ## 添加文件到暂存区
@@ -146,7 +146,7 @@ HEAD相当于指针,一次只能指向一个分支,HEAD永远指向当前分支,
 查看本地分支与远端分支的关联  
 `git branch -vv` -- 查看本地分支与远端分支的关联  
 
-## Git 开发流程图
+## Git开发流程图
 ![Git](https://github.com/Gjt-9520/Image_Resources/raw/main/markdown_images/Git%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg)
 
 开发中分支使用原则与流程:
@@ -198,11 +198,11 @@ git push [-f] [--set-upstream] [本地分支]:[远端分支]
 
 `git push -u origin main` -- 将本地的main分支推送到远程仓库origin,并将本地的main分支与远程的main分支关联起来(如果远程仓库中已经存在一个main分支,则会将其覆盖)
 
-## 从远程仓库(远端分支)中抓取  
+从远程仓库(远端分支)中抓取  
 `git fetch [远程仓库名] [远端分支]` -- 将远程仓库里的更新都抓取到本地,不会进行合并(如果不指定远端名称和远端分支,则抓取所有分支)  
 远程仓库名默认是origin,取决于远端服务器设置  
 
-## 从远程仓库(远端分支)中拉取  
+从远程仓库(远端分支)中拉取  
 `git pull [远程仓库名] [远端分支]` -- 将远程仓库里的修改都拉取到本地并自动进行合并,等同于 fetch + merge (如果不指定远端名称和远端分支,则拉取所有并更新当前分支)  
 远程仓库名默认是origin,取决于远端服务器设置   
 
