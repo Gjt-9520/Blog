@@ -1,11 +1,11 @@
 ---
 title: "Linux终端修改文件内容"
-description: ""
+description: "Vim"
 publishDate: "2023 12 16"
 tags: ["linux","terminal"]
 ---
 
-## Linux终端修改文件内容基本流程  
+## 基本流程  
 ①打开终端并进入要编辑的文件所在的目录  
 ②输入命令`vim 文件名`打开文件  
 ③使用箭头键移动光标到要修改的位置  
