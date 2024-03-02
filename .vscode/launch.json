@@ -2,6 +2,20 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
+			"type": "java",
+			"name": "HelloWorld",
+			"request": "launch",
+			"mainClass": "HelloWorld",
+			"projectName": "Blog_4f6c8b96"
+		},
+		{
+			"type": "java",
+			"name": "HelloWorld",
+			"request": "launch",
+			"mainClass": "content.Test.HelloWorld",
+			"projectName": "Blog_4f6c8b96"
+		},
+		{
 			"command": "./node_modules/.bin/astro dev",
 			"name": "Development server",
 			"request": "launch",
