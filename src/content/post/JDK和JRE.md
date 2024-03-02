@@ -1,7 +1,7 @@
 ---
 title: "Java-P16"
 description: "JDK和JRE"
-publishDate: "2023 12 20"
+publishDate: "2023 12 03"
 tags: ["java"]
 ---
 
