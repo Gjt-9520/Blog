@@ -1,6 +1,6 @@
 ---
-title: "Git-Terminal-使用手册"
-description: "简单介绍Git的流程及其常用的指令"
+title: "Git使用"
+description: "Git的流程及其常用的指令"
 publishDate: "2023 12 18"
 tags: ["git","terminal"]
 ---
