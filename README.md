@@ -1,1 +1,1 @@
-![顾今朝的博客](https://gjt-blog.netlify.app/)
+[顾今朝的博客](https://gjt-blog.netlify.app/)
