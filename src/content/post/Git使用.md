@@ -8,7 +8,7 @@ tags: ["git","terminal"]
 ## [Git官方文档链接](https://git-scm.com/docs)
 
 ## Git工作流程  
-![Git工作流程图](https://image-resources.vercel.app/git工作流程图)
+![Git工作流程图](https://image-resources.vercel.app/photos/thumbnail/Git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%9B%BE-ccf4df.jpg)
 
 指令:    
 clone(克隆):从远程仓库中克隆代码到本地仓库  
@@ -63,7 +63,7 @@ push(推送):修改完成后,需要和团队成员共享代码时,将代码推�
 `' '` -- (空格)表示文件未发生更改  
 
 ## Git-add和Git-commit工作流程图   
-![Git-add和Git-commit](https://image-resources.vercel.app/git-add工作流程图)
+![Git-add和Git-commit](https://image-resources.vercel.app/photos/thumbnail/Git-add%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%9B%BE-ccf4df.jpg)
 
 ## 添加文件到暂存区
 git add指令,即跟踪文件   
@@ -147,7 +147,7 @@ HEAD相当于指针,一次只能指向一个分支,HEAD永远指向当前分支,
 `git branch -vv` -- 查看本地分支与远端分支的关联  
 
 ## Git开发流程图
-![Git开发流程](https://image-resources.vercel.app/git开发流程图)
+![Git开发流程](https://image-resources.vercel.app/photos/thumbnail/Git%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B%E5%9B%BE-ccf4df.jpg)
 
 开发中分支使用原则与流程:
 
@@ -207,7 +207,7 @@ git push [-f] [--set-upstream] [本地分支]:[远端分支]
 远程仓库名默认是origin,取决于远端服务器设置   
 
 ## 解决冲突流程图 
-![解决合并冲突](https://image-resources.vercel.app/解决合并冲突)  
+![解决合并冲突](https://image-resources.vercel.app/photos/thumbnail/%E8%A7%A3%E5%86%B3%E5%90%88%E5%B9%B6%E5%86%B2%E7%AA%81-ccf4df.jpg)  
 
 解决冲突:  
 当两个分支上对文件的修改存在冲突,例如同时修改了同一个文件的同一行,这时就需要手动解决冲突  
