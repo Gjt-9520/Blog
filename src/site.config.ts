@@ -20,13 +20,16 @@ export const siteConfig: SiteConfig = {
 };
 
 export const menuLinks: Array<{ title: string; path: string }> = [
-
 	{
-		title: "最近更新",
-		path: "/",
+		title: "今朝图床",
+		path: "https://image-resources.vercel.app/",
 	},
 	{
 		title: "全部文章",
 		path: "/posts/",
+	},
+	{
+		title: "最近更新",
+		path: "/",
 	},
 ];
