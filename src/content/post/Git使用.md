@@ -62,10 +62,10 @@ push(推送):修改完成后,需要和团队成员共享代码时,将代码推�
 `U` -- 表示更新但未合并  
 `' '` -- (空格)表示文件未发生更改  
 
-## Git-add和Git-commit工作流程图   
+## Git-add和Git-commit工作流程   
 ![Git-add和Git-commit](https://image-resources.vercel.app/photos/thumbnail/Git-add%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%9B%BE-ccf4df.jpg)
 
-## 添加文件到暂存区
+### 添加文件到暂存区
 git add指令,即跟踪文件   
 `git add [文件1] [文件2] ...` -- 添加一个或多个文件到暂存区  
 `git add [本地路径]` -- 添加指定目录(包括子目录)到暂存区  
@@ -110,7 +110,7 @@ HEAD相当于指针,一次只能指向一个分支,HEAD永远指向当前分支,
 `git reset --soft [提交记录]` -- 保留工作区的改动代码,撤销git commit,不撤销git add  
 `git reset --hard [提交记录]` -- 删除工作区的改动代码,撤销git commit,撤销git add  
 
-## 将工作区内容或暂存区内容添加到仓库  
+### 将工作区内容或暂存区内容添加到仓库  
 `git commit [文件1] [文件2] ...` -- 将已被跟踪的文件(已经git add)提交到本地仓库,进入Vim命令界面输入提交记录的信息     
 `git commit -m "[修改内容]"` -- 提交暂存区内容到本地仓库,直接输入提交记录的信息   
 `git commit -am "[修改内容]"` -- (跳过git add)将所有已被跟踪的文件更改提交到仓库,直接输入提交记录的信息    
@@ -146,7 +146,7 @@ HEAD相当于指针,一次只能指向一个分支,HEAD永远指向当前分支,
 查看本地分支与远端分支的关联  
 `git branch -vv` -- 查看本地分支与远端分支的关联  
 
-## Git开发流程图
+## Git开发流程
 ![Git开发流程](https://image-resources.vercel.app/photos/thumbnail/Git%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B%E5%9B%BE-ccf4df.jpg)
 
 开发中分支使用原则与流程:
@@ -206,7 +206,7 @@ git push [-f] [--set-upstream] [本地分支]:[远端分支]
 `git pull [远程仓库名] [远端分支]` -- 将远程仓库里的修改都拉取到本地并自动进行合并,等同于 fetch + merge (如果不指定远端名称和远端分支,则拉取所有并更新当前分支)  
 远程仓库名默认是origin,取决于远端服务器设置   
 
-## 解决冲突流程图 
+## 解决冲突流程 
 ![解决合并冲突](https://image-resources.vercel.app/photos/thumbnail/%E8%A7%A3%E5%86%B3%E5%90%88%E5%B9%B6%E5%86%B2%E7%AA%81-ccf4df.jpg)  
 
 解决冲突:  
