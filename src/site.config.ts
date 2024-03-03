@@ -32,4 +32,8 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		title: "最近更新",
 		path: "/",
 	},
+	{
+		title: "Github",
+		path: "https://github.com/Gjt-9520/",
+	},
 ];
