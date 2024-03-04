@@ -13,9 +13,9 @@ project(项目)包含了module(模块)包含了package(包)包含了class(类)
 
 ## 技巧
 
-### 快速生成
-
 1.快速生成内方法:`psvm`
+
+2.快速生成打印输出语句:`sout`
 
 ```
 public class HelloWorld {
@@ -27,7 +27,7 @@ public class HelloWorld {
 }
 ```
 
-2.快速生成`for`循环:`循环次数.fori`
+3.快速生成`for`循环:`循环次数.fori`
 
 ```
 public class test {
@@ -40,30 +40,30 @@ public class test {
 }
 ```
 
-### 键盘录入
+4.键盘录入
 
 定义:Java已经写好一个类叫Scanner,这个类可以接收键盘输入的数字
 
 步骤:
 
-1.导包
+1.导包:`import java.util.Scanner;`
 
-2.创建对象
+**导包的动作必须出现在类定义的上边**
 
-3.接收数据
+2.创建对象:`Scanner sc = ew Scanner(System.in);`
+
+**只有sc是变量名,可以变,其他的都不允许变**
+
+3.接收数据:`int i = sc.nextInt();`
+
+**只有i是变量名,可以变,其他的都不允许变**
 
 ```
-//步骤1:导包
-//导包的动作必须出现在类定义的上边
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
-        //步骤2:创建对象
-        //只有sc数变量名,可以变,其他的都不允许变
         Scanner sc = ew Scanner(System.in);
         System.out.println("请输入整数:");
-        //步骤3:接收数据
-        //只有i是变量名,可以变,其他的都不允许变
         int i = sc.nextInt();
         System.out.println(i);
     }
@@ -84,6 +84,48 @@ public class Main {
         int number_02 = sc.nextInt();
         int count = number_01 + number_02;
         System.out.println("这两个整数之和为:" + count);
+    }
+}
+```
+
+5.获取随机数
+
+步骤:
+
+1.导包:`import java.util.Random;`
+
+**导包的动作必须出现在类定义的上边**
+
+2.创建对象:`Random r = new Random();`
+
+**只有r是变量名,可以变,其他的都不允许变**
+
+3.生成随机数:`int number = r.nextInt(x);`
+
+**只有number是变量名,可以变,其他的都不允许变**
+
+注意:
+
+**随机数的范围一定是从0开始的,到(x-1)结束的,即生成0~(x-1)之间的随机数**
+
+例如:`int number = r.nextInt(100)`是0~99内生成的随机数
+
+**口诀:包头不包尾,包左不包右**
+
+**生成随机数的代码不能写在循环里面,否则每循环一次都会产生一个新的随机数**
+
+生成任意范围内的随机数:
+
+例如45~60,即0~15,只需`int number = r.nextInt(16) + 45`
+
+```
+import java.util.Random;
+
+public class test {
+    public static void main(String[] args) {
+        Random r = new Random();
+        int number = r.nextInt(100);
+        System.out.println(number);
     }
 }
 ```
