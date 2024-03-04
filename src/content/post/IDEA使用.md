@@ -1,6 +1,6 @@
 ---
-title: "IDEA使用技巧"
-description: "积少成多"
+title: "IDEA使用"
+description: "快捷键和快速生成技巧"
 publishDate: "2023 11 30"
 tags: ["java","IDEA"]
 ---
