@@ -11,7 +11,11 @@ tags: ["java","IDEA"]
 
 project(项目)包含了module(模块)包含了package(包)包含了class(类)
 
-### 快速生成内方法
+## 技巧
+
+### 快速生成
+
+1.快速生成内方法:`psvm`
 
 ```
 public class HelloWorld {
@@ -19,6 +23,19 @@ public class HelloWorld {
     public static void main(String[] args) {
         //输入sout后回车,自动生成输出语句
         System.out.println();
+    }
+}
+```
+
+2.快速生成`for`循环:`循环次数.fori`
+
+```
+public class test {
+    public static void main(String[] args) {
+        //100.fori快速生成循环次数为100的for循环
+        for (int i = 0; i < 100; i++) {
+            System.out.printIn("HelloWorld");
+        }
     }
 }
 ```
