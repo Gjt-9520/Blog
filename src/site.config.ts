@@ -2,7 +2,7 @@ import type { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
 	author: "Gujintao",
-	title: "今朝博客",
+	title: "博客",
 	description: "blog",
 	lang: "zh-CN",
 	ogLocale: "zh-CN",
@@ -21,15 +21,19 @@ export const siteConfig: SiteConfig = {
 
 export const menuLinks: Array<{ title: string; path: string }> = [
 	{
-		title: "今朝图床",
-		path: "https://image-resources.vercel.app/",
+		title: "最近更新",
+		path: "/",
 	},
 	{
-		title: "全部文章",
+		title: "文章",
 		path: "/posts/",
 	},
 	{
-		title: "最近更新",
-		path: "/",
+		title: "标签",
+		path: "/tags/",
+	},
+	{
+		title: "图床",
+		path: "https://image-resources.vercel.app/",
 	},
 ];
