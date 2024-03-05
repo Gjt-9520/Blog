@@ -21,7 +21,7 @@ export const siteConfig: SiteConfig = {
 
 export const menuLinks: Array<{ title: string; path: string }> = [
 	{
-		title: "最近更新",
+		title: "最新",
 		path: "/",
 	},
 	{

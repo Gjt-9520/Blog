@@ -29,9 +29,11 @@ public class HelloWorld {
 }
 ```
 
-`System.out.printIn();`是打印后换行
+`System.out.print("abc");`表示:只打印abc,不换行
 
-`System.out.print();`是打印在同一行
+`System.out.printIn("abc");`表示:先打印abc,后换行
+
+`System.out.printIn();`表示:不打印任何数据,只换行
 
 ### 快速生成for循环
 
