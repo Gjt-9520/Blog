@@ -5,17 +5,19 @@ publishDate: "2023 11 30"
 tags: ["java","IDEA"]
 ---
 
-## IDEA
-
-项目结构介绍
+## IDEA项目结构
 
 project(项目)包含了module(模块)包含了package(包)包含了class(类)
 
 ## 技巧
 
-1.快速生成内方法:`psvm`
+### 快速生成内方法
 
-2.快速生成打印输出语句:`sout`
+`psvm`
+
+### 快速生成打印输出语句
+
+`sout`
 
 ```
 public class HelloWorld {
@@ -27,7 +29,9 @@ public class HelloWorld {
 }
 ```
 
-3.快速生成`for`循环:`循环次数.fori`
+### 快速生成for循环
+
+`循环次数.fori`
 
 ```
 public class test {
@@ -40,7 +44,7 @@ public class test {
 }
 ```
 
-4.键盘录入
+### 键盘录入
 
 定义:Java已经写好一个类叫Scanner,这个类可以接收键盘输入的数字
 
@@ -88,7 +92,7 @@ public class Main {
 }
 ```
 
-5.获取随机数
+### 获取随机数
 
 步骤:
 
@@ -130,7 +134,9 @@ public class test {
 }
 ```
 
-6.快速生成数组遍历(IDEA提供):`数组名.fori`
+### 快速生成数组遍历
+
+`数组名.fori`
 
 ```
 public class test {
@@ -144,9 +150,29 @@ public class test {
 }
 ```
 
+### 阅读异常
+
+例如:索引越界异常
+
+`Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: `
+
+在Java程序的主线程中发生了一个数组越界异常(`ArrayIndexOutOfBoundsException`)
+
+`Index 10 out of bounds for length 5`
+
+程序试图访问数组的第10个元素，但数组的长度只有5
+
+`at com.gujintao.test.main(test.java:8)`
+
+这个异常发生在`com.gujintao.test`包的`main`方法内,位置是第8行
+
 ## 快捷键
 
-ctrl + alt + L    自动格式化代码
+### 自动格式化代码
+
+ctrl + alt + L    自动格式化代码     
+
+### 复制、粘贴、剪切、删除
 
 ctrl + X    剪切当前行或选中内容
 
@@ -154,26 +180,36 @@ ctrl + C    复制当前行或选中内容
 
 ctrl + V    粘贴剪切板内容
 
-ctrl + Z    撤销上一步操作
-
 ctrl + D    复制当前行并粘贴到下一行
 
 ctrl + Y    删除当前行
 
-ctrl + W    选中当前光标所在的单词
+### 选中单词
 
-ctrl + shift + Z    恢复上一步被撤销的操作
+ctrl + W    选中当前光标所在的单词
 
 ctrl + shift + W    取消选中当前光标所在的单词
 
+### 撤销操作
+
+ctrl + Z    撤销上一步操作
+
+ctrl + shift + Z    恢复上一步被撤销的操作
+
+### 注释
+
 ctrl + shift + /    多行注释
 
-ctrl + shift + F10    运行
-
 ctrl + /    注释当前行或选中内容
+
+### 移动代码
 
 shift + alt + 上下    代码上下移动
 
 tab    代码右移
 
 tab + shift    代码左移
+
+### 运行
+
+ctrl + shift + F10    运行
