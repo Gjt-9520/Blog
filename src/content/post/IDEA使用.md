@@ -29,6 +29,10 @@ public class HelloWorld {
 }
 ```
 
+`System.out.printIn();`是打印后换行
+
+`System.out.print();`是打印在同一行
+
 ### 快速生成for循环
 
 `循环次数.fori`
