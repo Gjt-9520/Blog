@@ -2,7 +2,7 @@
 title: "IDEA使用"
 description: "快捷键和快速生成技巧"
 publishDate: "2023 11 30"
-tags: ["java","IDEA"]
+tags: ["java","IDEA","快捷键"]
 ---
 
 ## IDEA项目结构
@@ -174,46 +174,46 @@ public class test {
 
 ### 自动格式化代码
 
-ctrl + alt + L    自动格式化代码     
+`ctrl + alt + L`  
 
 ### 复制、粘贴、剪切、删除
 
-ctrl + X    剪切当前行或选中内容
+剪切当前行或选中内容 `ctrl + X` 
 
-ctrl + C    复制当前行或选中内容
+复制当前行或选中内容 `ctrl + C`
 
-ctrl + V    粘贴剪切板内容
+粘贴剪切板内容 `ctrl + V`    
 
-ctrl + D    复制当前行并粘贴到下一行
+复制当前行并粘贴到下一行 `ctrl + D`   
 
-ctrl + Y    删除当前行
+删除当前行 `ctrl + Y` 
 
 ### 选中单词
 
-ctrl + W    选中当前光标所在的单词
+选中当前光标所在的单词 `ctrl + W`    
 
-ctrl + shift + W    取消选中当前光标所在的单词
+取消选中当前光标所在的单词 `ctrl + shift + W`   
 
 ### 撤销操作
 
-ctrl + Z    撤销上一步操作
+撤销上一步操作 `ctrl + Z`
 
-ctrl + shift + Z    恢复上一步被撤销的操作
+恢复上一步被撤销的操作 `ctrl + shift + Z`
 
 ### 注释
 
-ctrl + shift + /    多行注释
+多行注释 `ctrl + shift + /`    
 
-ctrl + /    注释当前行或选中内容
+注释当前行或选中内容 `ctrl + /`    
 
 ### 移动代码
 
-shift + alt + 上下    代码上下移动
+代码上下移动 `shift + alt + up / down`    
 
-tab    代码右移
+代码右移 `tab`    
 
-tab + shift    代码左移
+代码左移 `tab + shift`    
 
 ### 运行
 
-ctrl + shift + F10    运行
+运行 `ctrl + shift + F10`
