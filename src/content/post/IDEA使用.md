@@ -130,6 +130,20 @@ public class test {
 }
 ```
 
+6.快速生成数组遍历(IDEA提供):`数组名.fori`
+
+```
+public class test {
+    public static void main(String[] args) {
+        int[] array = {12, 213, 414};
+        //array.fori快速生成数组遍历
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+    }
+}
+```
+
 ## 快捷键
 
 ctrl + alt + L    自动格式化代码
@@ -142,19 +156,21 @@ ctrl + V    粘贴剪切板内容
 
 ctrl + Z    撤销上一步操作
 
-ctrl + shift + Z    恢复上一步被撤销的操作
-
 ctrl + D    复制当前行并粘贴到下一行
 
 ctrl + Y    删除当前行
 
 ctrl + W    选中当前光标所在的单词
 
+ctrl + shift + Z    恢复上一步被撤销的操作
+
 ctrl + shift + W    取消选中当前光标所在的单词
 
-ctrl + /    注释当前行或选中内容
-
 ctrl + shift + /    多行注释
+
+ctrl + shift + F10    运行
+
+ctrl + /    注释当前行或选中内容
 
 shift + alt + 上下    代码上下移动
 
