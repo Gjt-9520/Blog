@@ -174,9 +174,11 @@ public class test {
 
 ## 快捷键
 
-### 自动格式化代码
+### 代码操作
 
-`ctrl + alt + L`  
+自动格式化代码 `ctrl + alt + L`
+
+自动抽取方法 `ctrl + alt + M`  
 
 ### 复制、粘贴、剪切、删除
 
