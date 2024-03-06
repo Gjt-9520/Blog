@@ -1,5 +1,5 @@
 ---
-title: "Java-P16JVM、JDK和JRE"
+title: "JVM、JDK和JRE"
 description: "P16"
 publishDate: "2023 12 03"
 tags: ["java入门上","java"]
