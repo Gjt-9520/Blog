@@ -180,6 +180,8 @@ public class test {
 
 自动抽取方法 `ctrl + alt + M`  
 
+快速生成JavaBean `alt + insert`
+
 ### 复制、粘贴、剪切、删除
 
 剪切当前行或选中内容 `ctrl + X` 

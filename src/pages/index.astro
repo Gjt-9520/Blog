@@ -3,7 +3,7 @@ import PageLayout from "@/layouts/Base";
 import PostPreview from "@/components/blog/PostPreview";
 import { getAllPosts, sortMDByDate } from "@/utils";
 
-const MAX_POSTS = 25;
+const MAX_POSTS = 1000;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
