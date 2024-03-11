@@ -19,7 +19,7 @@ project(项目)包含了module(模块)包含了package(包)包含了class(类)
 
 `sout`
 
-```
+```java
 public class HelloWorld {
     //输入psvm后回车,自动生成内方法
     public static void main(String[] args) {
@@ -35,11 +35,28 @@ public class HelloWorld {
 
 `System.out.printIn();`表示:不打印任何数据,只换行
 
+`souf`包括两部分参数
+
+第一部分参数:要输出的内容%s(占位)
+
+第二部分参数:填充的数据
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        //输出:张三笑着打招呼说道:你好啊,小美
+        System.out.printf("%s笑着打招呼说道:你好啊,%s","张三","小美");
+    }
+}
+```
+
+`System.out.printf("ab%s","c");`表示:只打印abc,不换行
+
 ### 快速生成for循环
 
 `循环次数.fori`
 
-```
+```java
 public class test {
     public static void main(String[] args) {
         //100.fori快速生成循环次数为100的for循环
@@ -68,7 +85,7 @@ public class test {
 
 **只有i是变量名,可以变,其他的都不允许变**
 
-```
+```java
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
@@ -82,7 +99,7 @@ public class Main {
 
 练习:键盘输入数字并求和
 
-```
+```java
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
@@ -128,7 +145,7 @@ public class Main {
 
 例如45~60,即0~15,只需`int number = r.nextInt(16) + 45`
 
-```
+```java
 import java.util.Random;
 
 public class test {
@@ -144,7 +161,7 @@ public class test {
 
 `数组名.fori`
 
-```
+```java
 public class test {
     public static void main(String[] args) {
         int[] array = {12, 213, 414};
