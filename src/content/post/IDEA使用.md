@@ -114,6 +114,65 @@ public class Main {
     }
 }
 ```
+#### 第一套体系
+
+`nextInt()`:接受整数
+
+`nextDouble()`:接受小数
+
+`next()`:接受字符串
+
+遇到空格、制表符(`\t`\)、回车就停止接受数据
+
+即这些符号后面的数据就不会接受了
+
+```java
+import java.util.Scanner;
+
+public class test2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("请输入一个整数:");
+        //nextInt():接受整数
+        int number1 = sc.nextInt();
+        System.out.println("一个整数:" + number1);
+
+        System.out.println("请输入一个小数:");
+        //nextDouble():接受小数
+        double number2 = sc.nextDouble();
+        System.out.println("一个小数:" + number2);
+
+        System.out.println("请输入一个字符串:");
+        //next():接受字符串
+        String word1 = sc.next();
+        System.out.println("一个字符串:" + word1);
+    }
+}
+```
+
+#### 第二套体系
+
+`nextLine()`:接受字符串
+
+可以接受空格、制表符(`\t`\)
+
+遇到回车就停止接受数据
+
+```java
+import java.util.Scanner;
+
+public class test2 {
+    public static void main(String[] args) {
+        System.out.println("请输入一个字符串:");
+        //nextLine()接受字符串
+        String word2 = sc.nextLine();
+        System.out.println("一个字符串:" + word2);
+    }
+}
+```
+
+**第一套体系和第二套体系不能混用**
 
 ### 获取随机数
 
@@ -239,4 +298,8 @@ public class test {
 
 ### 运行
 
-运行 `ctrl + shift + F10`
+`ctrl + shift + F10`
+
+### 显示参数
+
+`ctrl + P`
