@@ -218,7 +218,7 @@ public class test {
 
 ### 快速生成数组遍历
 
-`数组名.fori`
+正序遍历:`数组名.fori`
 
 ```java
 public class test {
@@ -226,6 +226,20 @@ public class test {
         int[] array = {12, 213, 414};
         //array.fori快速生成数组遍历
         for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+    }
+}
+```
+
+逆序遍历:`数组名.forr`
+
+```java
+public class test {
+    public static void main(String[] args) {
+        int[] array = {12, 213, 414};
+        //array.forr快速生成数组遍历
+        for (int i = array.length - 1; i >= 0; i--) {
             System.out.println(array[i]);
         }
     }

@@ -114,3 +114,9 @@ tags: ["java","VSCode","快捷键"]
 全局替换 `ctrl + shift + H`
 
 当前文件替换 `ctrl + H`
+
+## 撤销/复原操作
+
+撤销操作 `ctrl + Z`
+
+复原操作 `ctrl + shift + Z`

@@ -1,9 +1,11 @@
 ---
-title: "ASCII表"
+title: "ASCII码表"
 description: "可显示字符和控制字符"
 publishDate: "2023 11 28"
 tags: ["ASCII"]
 ---
+
+**char类型的变量在参与计算的时候,自动类型提升为int,查询ASCII码表**
 
 ![ASCII表可显示字符][image_ASCII表可显示字符]
 
