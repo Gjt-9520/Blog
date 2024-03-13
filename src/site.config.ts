@@ -21,12 +21,12 @@ export const siteConfig: SiteConfig = {
 
 export const menuLinks: Array<{ title: string; path: string }> = [
 	{
-		title: "最新",
-		path: "/",
+		title: "首页",
+		path: "/posts/",
 	},
 	{
 		title: "文章",
-		path: "/posts/",
+		path: "/",
 	},
 	{
 		title: "标签",

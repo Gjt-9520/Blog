@@ -6,10 +6,9 @@ import { getAllPosts, sortMDByDate } from "@/utils";
 const MAX_POSTS = 1000;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
-
 ---
 
-<PageLayout meta={{ title: "最新" }}>
+<PageLayout meta={{ title: "文章" }}>
 	<section aria-label="Blog post list" class="mt-0">
 		<ul class="space-y-4 sm:space-y-2">
 			{
@@ -22,4 +21,3 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</ul>
 	</section>
 </PageLayout>
-

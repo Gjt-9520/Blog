@@ -21,7 +21,7 @@ interface Props {
 const { page, uniqueTags } = Astro.props;
 
 const meta = {
-	title: "文章",
+	title: "首页",
 	description: "",
 };
 
@@ -42,6 +42,31 @@ const paginationProps = {
 ---
 
 <PageLayout meta={meta}>
+	<h2 class="mb-4 flex items-center text-lg font-semibold">
+		<svg
+			aria-hidden="true"
+			xmlns="http://www.w3.org/2000/svg"
+			class="h-6 w-6"
+			viewBox="0 0 24 24"
+			stroke-width="1.5"
+			stroke="currentColor"
+			fill="none"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+		>
+			<g transform="matrix(1.3333334 0 0 1.3333334 2 2.5)">
+				<image
+					x="0"
+					y="0"
+					xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFsAAABbCAYAAAAcNvmZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPbSURBVHhe7ZyhrhQxFIZXIhAIDIbgMAgEggSDRCKRhOBA8AAIPAKJRCLvIyCQCAwJghAeAEGCQcL5spmEe3I6d+/cntNue/7kM9xh237baTsznd1VzBXhofBB+Cz8Ev4OAO34IbwR7gvNQyWokFXZ0aAj3RCa5IVgVWp0wnv5rKIXbgsh4ZsdZVzeCu0PCRNhqQKvBL6MEWDSfydYbQXa6hpOH6tgJg9WJSOm1Gb33m2N1RQaNoY1ymNBtxtcVyfWaXUizBBrnuJLcIslm0X/DGGo1G3nTHdLyj5NynZKyg5Myg5Myg5Myg7M8LKvCs8FLo09eSCclaFl3xH+CLo8Lz4KaxlaNp+ry/LmllDK0LKfCbosT74LN4VShpZ9WXgtfBN49OYJQwi3VNcy/ATZU1J2YFJ2YFJ2YFJ2YFJ2YIaWfUngUv2TYC3XavJeuCusZWjZTwRdlidfhOtCKUPLfivosrxZ2yUwtGw2yuiyPPkqrGX4CZIbQy8F67ZoTZ4K3B5Yy/Cye0rKDkzKDky4bGvP21m3JkdJuGxCT6Yg9r65F9ZRmsheMuoW4VKayp4tKTswKTswKTswobKXN3lZjbDejoBLadfd/edImGxuCnHfVxcWBcvM1uv5ENn0LOt9kha0FO4um6GjF9FAXVqt791l82G6gNa0ejvNXTYN0wXQu6zJzIPSWcUcEh132dar06wQolJ6WsOXEJ3hZRPr7ILoW7tTyF6bpCNf455CNmHJp+sBCIjKNLKJVReIusKcSja/gKDrAgwxEb/dNJVsQtm6PhCx9u5GNvvy6F01KaV0jwbh1lqdVUuNoaYL2Wyi+Sno4y4KO5QeCTpbd0oh6yKrl+ay7wm/BX1MLWjgNUGHHmsdfwhbhTeXzTZb/fea8NKptS2MtbfV+EPYevXZXDZhb7M+pgaItuaHJQjf2sO3jOFdyCZMaIylNeG99UPCsECdmAgtrKvPtS+xlG5k9xyE6zZwRpw3KfuApOzApOzApOzApOzApOzApOzApOzApOzApOzApOzA1JJtPbSo+vwzZe9T2k5RdaNnyt6HNuvPgLXHd+dOyt6Py1avZgyvmtlkcx8dubSR/2dNigtVJ0cyk2zruBJ4qb5PfBbZiNPHlGBVUnWsXpKyT8Ow4iKazDSMrI3PTJCM0dWHjv8zk2xEcixthmWHFRcurpKXzCS7eVJ2YEaQjVjdhi5lr70tRo85BqyrP/69uzA56IqOQOtXs80wC1s945jhoiRkdbEl3C+wKn2M0HFoT9ehgi1/laEGXLR0OXyUwhjOaoQJ8lhgMkRyo6Fjt/sHzKpkk/BLi9cAAAAASUVORK5CYII="
+					preserveAspectRatio="none"
+					width="14.5"
+					height="14.5"
+				/>
+			</g>
+		</svg>
+		 文章
+	</h2>
 	<div class="grid gap-y-16 sm:grid-cols-[3fr_1fr] sm:gap-x-8">
 		<section aria-label="Blog post list">
 			<ul class="space-y-8 text-start">
@@ -81,7 +106,7 @@ const paginationProps = {
 						{uniqueTags.map((tag) => (
 							<li>
 								<a
-									class="flex items-center justify-center rounded-lg sm:hover:text-accent p-1"
+									class="flex items-center justify-center rounded-lg p-1 sm:hover:text-accent"
 									href={`/tags/${tag}/`}
 									aria-label={`View all posts with the tag: ${tag}`}
 								>
