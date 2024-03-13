@@ -317,3 +317,7 @@ public class test {
 ### 显示参数
 
 `ctrl + P`
+
+### 拆分变量为声明和赋值
+
+选中变量后,拆分变量为声明和赋值 `alt + enter`

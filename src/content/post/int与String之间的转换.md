@@ -1,7 +1,7 @@
 ---
 title: "int与String之间的转换"
 description: "int、double、float、Long与String之间的转换"
-publishDate: "2023 12 30"
+publishDate: "2023 12 31"
 tags: ["数据类型转换","java"]
 ---
 
@@ -89,7 +89,7 @@ public class test {
 
 其中`Integer.parseInt(str)`返回原始`int`
 
-直接使用静态方法，不会产生多余的对象，但会抛出异常
+直接使用静态方法，不会产生多余的对象
 
 ```java
 public class test {
@@ -120,17 +120,15 @@ public class test {
 
 ### 方法2
 
-`int i = Integer.valueOf(str).intValue();`
+`int i = Integer.valueOf(str);`
 
 其中`Integer.valueOf(str)`返回一个`Integer`对象
-
-会产生多余的对象，也会抛出异常
 
 ```java
 public class test {
     public static void main(String[] args) {
         String str = "123";
-        int i = Integer.valueOf(str).intValue();
+        int i = Integer.valueOf(str);
         //打印结果:"123"
         System.out.println(i);
     }
