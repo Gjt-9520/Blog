@@ -65,7 +65,7 @@ const paginationProps = {
 				/>
 			</g>
 		</svg>
-		 文章
+		<a class = "sm:hover:text-accent" href="/">文章</a>
 	</h2>
 	<div class="grid gap-y-16 sm:grid-cols-[3fr_1fr] sm:gap-x-8">
 		<section aria-label="Blog post list">
@@ -84,7 +84,7 @@ const paginationProps = {
 			!!uniqueTags.length && (
 				<aside>
 					<h2 class="mb-4 flex items-center text-lg font-semibold">
-							<svg
+						<svg
 							aria-hidden="true"
 							xmlns="http://www.w3.org/2000/svg"
 							class="h-6 w-6"
@@ -105,8 +105,8 @@ const paginationProps = {
 									height="14.5"
 								/>
 							</g>
-						</svg>	
-						标签
+						</svg>
+						<a class = "sm:hover:text-accent" href="/tags/">标签</a>	
 					</h2>
 					<ul class="flex flex-wrap gap-2 ">
 						{uniqueTags.map((tag) => (
