@@ -12,7 +12,7 @@ const meta = {
 ---
 
 <PageLayout meta={meta}>
-	<ul class="space-y-4">
+	<ul class="space-y-2">
 		{
 			allTags.map(([tag, val]) => (
 				<li class="flex items-center gap-x-2">
@@ -24,7 +24,7 @@ const meta = {
 						&#35;{tag}
 					</a>
 					<span class="inline-block">
-						- {val} 篇文章
+						-- {val} 篇文章
 					</span>
 				</li>
 			))

@@ -10,9 +10,8 @@ const url = new URL(Astro.request.url);
 	<div class="flex sm:flex-col">
 		<a
 			href="/posts/"
-			class="inline-flex items-center grayscale hover:filter-none sm:relative sm:inline-block"
+			class="inline-flex items-center grayscale sm:relative sm:inline-block"
 			aria-current={url.pathname === "/posts/" ? "page" : false}
-
 			>
 			<svg class="me-3 h-10 w-10 sm:absolute sm:start-[-4.5rem] sm:me-0 sm:h-20 sm:w-12"
 				aria-hidden="true"
@@ -35,7 +34,7 @@ const url = new URL(Astro.request.url);
 
 				</g>
 			</svg>
-		<span class="text-xl font-bold sm:text-2xl sm:hover:text-accent">今朝有酒今朝醉,明日愁来明日愁</span>
+		<span class="text-xl font-bold sm:text-2xl">今朝有酒今朝醉,明日愁来明日愁</span>
 		</a>
 		<nav
 			id="navigation-menu"
