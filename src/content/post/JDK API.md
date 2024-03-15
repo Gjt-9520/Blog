@@ -2,7 +2,7 @@
 title: "JDK API"
 description: "P96"
 publishDate: "2023 12 28"
-tags: ["java入门上","java"]
+tags: ["java基础","java"]
 ---
 
 ## [JDK API 官方文档链接](https://www.oracle.com/cn/java/technologies/java-se-api-doc.html)
