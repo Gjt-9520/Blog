@@ -97,7 +97,9 @@ public class Main {
 }
 ```
 
-练习:键盘输入数字并求和
+练习:
+
+键盘输入数字并求和
 
 ```java
 import java.util.Scanner;

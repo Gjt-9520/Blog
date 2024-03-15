@@ -11,7 +11,9 @@ tags: ["java基础","java"]
 
 `Application Programming Interface`即应用程序编程接口
 
-练习:学习`Scanner`类的使用,实现键盘录入小数并打印在控制台
+练习:
+
+学习`Scanner`类的使用,实现键盘录入小数并打印在控制台
 
 ```java
 import java.util.Scanner;
