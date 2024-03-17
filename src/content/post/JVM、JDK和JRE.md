@@ -1,6 +1,6 @@
 ---
 title: "JVM、JDK和JRE"
-description: "P16"
+description: "JVM、JDK和JRE的概念介绍"
 publishDate: "2023 12 03"
 tags: ["java基础","java"]
 ---

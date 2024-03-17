@@ -1,6 +1,6 @@
 ---
 title: "JDK API"
-description: "P96"
+description: "Java Development Kit Application Programming Interface"
 publishDate: "2023 12 28"
 tags: ["java基础","java"]
 ---
