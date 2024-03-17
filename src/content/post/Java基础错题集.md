@@ -1,8 +1,8 @@
 ---
-title: "错题集"
-description: "收藏的题目"
+title: "Java基础错题集"
+description: "收藏Java基础有点难度的题目"
 publishDate: "2023 12 17"
-tags: ["java","练习"]
+tags: ["java基础","java","练习"]
 ---
 
 ## 回文数

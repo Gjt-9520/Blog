@@ -1,5 +1,5 @@
 ---
-title: "编程案例"
+title: "Java基础编程案例"
 description: "卖飞机票、找质数、开发验证码、数组元素的复制、评委打分、数字加密/解密..."
 publishDate: "2023 12 24"
 tags: ["java基础","java","练习"]
