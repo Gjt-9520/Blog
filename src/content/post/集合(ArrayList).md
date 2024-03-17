@@ -1,5 +1,5 @@
 ---
-title: "集合"
+title: "集合(ArrayList)"
 description: "P111~P115"
 publishDate: "2024 1 01"
 tags: ["java基础","java"]
@@ -18,4 +18,6 @@ tags: ["java基础","java"]
 数组:引用数据类型 + 基本数据类型
 
 集合:引用数据类型 + 基本数据类型(转换成对应的包装类)
+
+## ArrayList
 
