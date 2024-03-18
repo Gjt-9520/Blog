@@ -11,7 +11,7 @@ project(项目)包含了module(模块)包含了package(包)包含了class(类)
 
 ## 技巧
 
-### 快速生成内方法
+### 快速生成main()方法
 
 `psvm`
 
@@ -21,7 +21,7 @@ project(项目)包含了module(模块)包含了package(包)包含了class(类)
 
 ```java
 public class HelloWorld {
-    //输入psvm后回车,自动生成内方法
+    //输入psvm后回车,自动生成main()方法
     public static void main(String[] args) {
         //输入sout后回车,自动生成输出语句
         System.out.println();
@@ -327,3 +327,7 @@ public class test {
 ### 快速生成包围
 
 选中代码后,为代码添加包围 `ctrl + alt + T`
+
+### 快速生成方法
+
+选中方法后,在`main()`方法外创建方法 `ctrl + enter`
