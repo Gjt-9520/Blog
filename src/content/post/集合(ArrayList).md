@@ -1,5 +1,5 @@
 ---
-title: "集合"
+title: "集合(ArrayList)"
 description: "集合和数组的对比,ArrayList"
 publishDate: "2024 1 01"
 tags: ["java基础","java"]
