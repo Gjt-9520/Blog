@@ -2,7 +2,7 @@
 title: "Git使用"
 description: "Git的流程及其常用的指令"
 publishDate: "2023 12 02"
-tags: ["git","terminal"]
+tags: ["git","终端"]
 ---
 
 ## [Git 官方文档链接](https://git-scm.com/docs)

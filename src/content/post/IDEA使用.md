@@ -2,7 +2,7 @@
 title: "IDEA使用"
 description: "快捷键和快速生成技巧"
 publishDate: "2023 11 30"
-tags: ["java","IDEA","快捷键"]
+tags: ["java","IDEA","快捷键","编译器"]
 ---
 
 ## IDEA项目结构

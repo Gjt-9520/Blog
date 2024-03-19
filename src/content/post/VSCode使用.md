@@ -2,7 +2,7 @@
 title: "VSCode使用"
 description: "快捷键"
 publishDate: "2023 11 29"
-tags: ["java","VSCode","快捷键"]
+tags: ["java","VSCode","快捷键","编译器"]
 ---
 
 ## 快捷键

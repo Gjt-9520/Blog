@@ -2,7 +2,7 @@
 title: "JDK API"
 description: "Java Development Kit Application Programming Interface"
 publishDate: "2023 12 28"
-tags: ["java基础","java"]
+tags: ["java基础","java","API"]
 ---
 
 ## [JDK API 官方文档链接](https://www.oracle.com/cn/java/technologies/java-se-api-doc.html)
