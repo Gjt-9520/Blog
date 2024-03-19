@@ -331,3 +331,10 @@ public class test {
 ### 快速生成方法
 
 选中方法后,在`main()`方法外创建方法 `ctrl + enter`
+
+### 列选择模式
+
+`alt + shift + insert`
+
+或者按住`alt`不松,鼠标左键也可以实现列选择
+
