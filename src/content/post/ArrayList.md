@@ -1,8 +1,8 @@
 ---
-title: "集合(ArrayList)"
+title: "ArrayList"
 description: "集合和数组的对比;ArrayList的构造方法和成员方法"
 publishDate: "2024 1 01"
-tags: ["java基础","java"]
+tags: ["java基础","java","集合"]
 ---
 
 ## 集合和数组的对比
