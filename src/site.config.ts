@@ -36,4 +36,8 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		title: "图床",
 		path: "https://image-resources.vercel.app/",
 	},
+	{
+		title: "仓库",
+		path: "https://github.com/Gjt-9520/",
+	},
 ];
