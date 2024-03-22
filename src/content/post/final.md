@@ -1,7 +1,7 @@
 ---
-title: "包和final"
-description: "包名的规则;使用其他类的规则;final修饰的方法、类、变量"
-publishDate: "2024 01 07"
+title: "final"
+description: "final修饰的方法、类和变量"
+publishDate: "2024 01 08"
 tags: ["java进阶","java","面向对象"]
 ---
 
