@@ -196,7 +196,7 @@ public class Test {
 
 `final`修饰的变量是基本类型:那么变量存储的**数据值**不能发生改变
 
-`final`修饰的变量是引用类型:那么变量存储的**地址值**不能发生改变,对象内部的属性值可以改变
+`final`修饰的变量是引用类型:那么变量存储的**地址值**不能发生改变,对象内部的**属性值**可以改变
 
 范例:
 
@@ -262,3 +262,52 @@ public class Test {
 
 将学生管理系统中用户的操作改为常量的形式
 
+```java
+public class StudentSystem {
+    private static final String ADD_STUDENT = "1";
+    private static final String DELETE_STUDENT = "2";
+    private static final String MODIFY_STUDENT = "3";
+    private static final String QUERY_STUDENT = "4";
+    private static final String BACK = "5";
+    private static final String EXIT = "6";
+
+    //学生管理系统主界面
+    public static void mainMenu() {
+        Scanner scanner = new Scanner(System.in);
+        //定义学生集合
+        ArrayList<Student> list = new ArrayList<>();
+        Student stu1 = new Student("202301", "张三生", 29, "南京");
+        Student stu2 = new Student("202302", "李四维", 21, "上海");
+        Student stu3 = new Student("202303", "王五峰", 22, "深圳");
+        list.add(stu1);
+        list.add(stu2);
+        list.add(stu3);
+        mainMenu:
+        while (true) {
+            System.out.println("-----------------");
+            System.out.println("|  学生管理系统主界面\t|");
+            System.out.println("|  1: 添加学生信息\t|");
+            System.out.println("|  2: 删除学生信息\t|");
+            System.out.println("|  3: 修改学生信息\t|");
+            System.out.println("|  4: 查询学生信息\t|");
+            System.out.println("|  5: 返回登录界面\t|");
+            System.out.println("|  6: 退出系统\t\t|");
+            System.out.println("-----------------");
+            System.out.print("请输入您的选择:");
+            String choose = scanner.next();
+            switch (choose) {
+                case ADD_STUDENT -> addStudent(list);
+                case DELETE_STUDENT -> deleteStudent(list);
+                case MODIFY_STUDENT -> modifyStudent(list);
+                case QUERY_STUDENT -> queryStudent(list);
+                case BACK -> {
+                    break mainMenu;
+                }
+                case EXIT -> System.exit(0);
+                default -> System.out.println("没有这个选项,请重新输入!");
+            }
+        }
+    }
+    ...
+}
+```

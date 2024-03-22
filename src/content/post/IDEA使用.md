@@ -338,3 +338,7 @@ public class test {
 
 或者按住`alt`不松,鼠标左键也可以实现列选择
 
+### 小写转变成大写
+
+`ctrl + shift + U`
+
