@@ -2,7 +2,7 @@
 title: "static"
 description: "静态变量;静态方法;重新认识main方法"
 publishDate: "2024 01 04"
-tags: ["java进阶","java","面向对象"]
+tags: ["java基础","java","面向对象"]
 ---
 
 ## static
