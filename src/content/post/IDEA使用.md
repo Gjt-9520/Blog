@@ -352,4 +352,8 @@ public class test {
 
 ### 跟进
 
-`ctrl + B`
+跟进 `ctrl + B`
+
+后退 `ctrl + alt + ←`
+
+前进 `ctrl + alt + →`
