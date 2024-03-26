@@ -1,5 +1,5 @@
 ---
-title: "图书管理系统"
+title: "图书管理系统(Terminal)"
 description: "添加、删除、修改和查询图书信息"
 publishDate: "2024 1 03"
 tags: ["java基础","java","项目"]

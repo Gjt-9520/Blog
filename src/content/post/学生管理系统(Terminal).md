@@ -1,5 +1,5 @@
 ---
-title: "学生管理系统"
+title: "学生管理系统(Terminal)"
 description: "添加、删除、修改和查询学生信息;用户登录界面"
 publishDate: "2024 1 02"
 tags: ["java基础","java","项目"]
