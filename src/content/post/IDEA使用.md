@@ -342,3 +342,14 @@ public class test {
 
 `ctrl + shift + U`
 
+### 搜索
+
+`ctrl + N`
+
+### 查看类的方法
+
+`ctrl + F12`
+
+### 跟进
+
+`ctrl + B`
