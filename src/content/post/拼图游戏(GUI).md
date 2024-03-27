@@ -289,9 +289,9 @@ public class GameJFrame extends JFrame {
 
     //初始化图片
     private void initImage() {
-        //外循环:把内循环重复执行4次,即执行4行
+        //外循环:把内循环重复执行4次,即j是行
         for (int j = 0; j < 4; j++) {
-            //内循环:每行添加4张图片
+            //内循环:每行添加4张图片,即i是列
             for (int i = 0; i < 4; i++) {
                 int number = data[i][j];
                 //创建图片
@@ -299,7 +299,7 @@ public class GameJFrame extends JFrame {
                 //创建管理容器
                 JLabel jLabel = new JLabel(icon);
                 //指定图片位置
-                jLabel.setBounds(105 * i, 105 * j, 105, 105);
+                jLabel.setBounds(105 * j, 105 * i, 105, 105);
                 //将管理容器添加到界面(隐藏容器)当中
                 this.getContentPane().add(jLabel);
             }
@@ -317,9 +317,9 @@ public class GameJFrame extends JFrame {
 ```java
 //初始化图片
 private void initImage() {
-    //外循环:把内循环重复执行4次,即执行4行
+    //外循环:把内循环重复执行4次,即j是行
     for (int j = 0; j < 4; j++) {
-        //内循环:每行添加4张图片
+        //内循环:每行添加4张图片,即i是列
         for (int i = 0; i < 4; i++) {
             int number = data[i][j];
             //创建图片
@@ -327,7 +327,7 @@ private void initImage() {
             //创建管理容器
             JLabel jLabel = new JLabel(icon);
             //指定图片位置(通过XY轴的适当偏移,使图片整体显示居中)
-            jLabel.setBounds(105 * i + 83, 105 * j + 134, 105, 105);
+            jLabel.setBounds(105 * j + 83, 105 * i + 134, 105, 105);
             //给图片添加边框
             //BevelBorder:斜面边框(参数BevelBorder.RAISED:凸起)
             jLabel.setBorder(new BevelBorder(BevelBorder.RAISED));
@@ -345,6 +345,247 @@ private void initImage() {
     //将管理容器添加到界面(隐藏容器)当中
     this.getContentPane().add(background);
 }
+```
+
+### 移动图片
+
+```java
+int[][] arr = {
+{0, 0}, {0, 1}, {0, 2}, {0, 3}, 
+{1, 0}, {1, 1}, {1, 2}, {1, 3}, 
+{2, 0}, {2, 1}, {2, 2}, {2, 3}, 
+{3, 0}, {3, 1}, {3, 2}, {3, 3},
+}
+```
+
+向上移动:空白图片与下方的图片交换位置
+
+向下移动:空白图片与上方的图片交换位置
+
+向右移动:空白图片与左边的图片交换位置
+
+向左移动:空白图片与右边的图片交换位置
+
+1.定义成员变量zeroX和zeroY
+
+```java
+//定义一维数组中索引为0的图片(即空白图片)在二维数组里的位置
+int zeroX = 0;
+int zeroY = 0;
+```
+
+2.在初始化数据的时候,给成员变量赋值
+
+```java
+//遍历一维数组
+for (int i = 0; i < tempArr.length; i++) {
+    //获取一维数组中索引为0的图片(即空白图片)在二维数组里的位置
+    if (tempArr[i] == 0) {
+        zeroX = i / 4;
+        zeroY = i % 4;
+    } else {
+        //将一维数组中索引0~3,4~7,8~11,12~15的元素分别添加到二维数组中
+        data[i / 4][i % 4] = tempArr[i];
+    }
+}
+```
+
+3.重写键盘监听接口的方法:实现控制上下左右移动图片
+
+```java
+@Override
+public void keyReleased(KeyEvent e) {
+    //对左(37)、上(38)、右(39)、下(40)
+    //和A(65)、W(87)、D(68)、S(83)进行判断,实现位移操作
+    int code = e.getKeyCode();
+
+    //向左移动:空白图片与右边的图片交换位置
+    if (code == 37 || code == 65) {
+        //确保空白图片不在最右边
+        if (zeroY != 3) {
+            data[zeroX][zeroY] = data[zeroX][zeroY + 1];
+            data[zeroX][zeroY + 1] = 0;
+            //空白图片的位置变化
+            zeroY++;
+            //调用方法按照最新的顺序加载图片
+            initImage();
+        }
+
+        //向上移动:空白图片与下方的图片交换位置
+    } else if (code == 38 || code == 87) {
+        //确保空白图片不在最下边
+        if (zeroX != 3) {
+            data[zeroX][zeroY] = data[zeroX + 1][zeroY];
+            data[zeroX + 1][zeroY] = 0;
+            //空白图片的位置变化
+            zeroX++;
+            //调用方法按照最新的顺序加载图片
+            initImage();
+        }
+
+        //向右移动:空白图片与左边的图片交换位置
+    } else if (code == 39 || code == 68) {
+        //确保空白图片不在最左边
+        if (zeroY != 0) {
+            data[zeroX][zeroY] = data[zeroX][zeroY - 1];
+            data[zeroX][zeroY - 1] = 0;
+            //空白图片的位置变化
+            zeroY--;
+            //调用方法按照最新的顺序加载图片
+            initImage();
+        }
+
+        //向下移动:空白图片与上方的图片交换位置
+    } else if (code == 40 || code == 83) {
+        //确保空白图片不在最上边
+        if (zeroX != 0) {
+            data[zeroX][zeroY] = data[zeroX - 1][zeroY];
+            data[zeroX - 1][zeroY] = 0;
+            //空白图片的位置变化
+            zeroX--;
+            //调用方法按照最新的顺序加载图片
+            initImage();
+        }
+    }
+}
+```
+
+### 查看图片
+
+1.定义成员二维数组win
+
+```java
+//定义一个二维数组存储正确的顺序
+int[][] win = new int[][]{
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12},
+        {13, 14, 15, 0},
+};
+```
+
+2.重写键盘监听接口的方法:实现按住空格查看完整图片
+
+```java
+@Override
+public void keyPressed(KeyEvent e) {
+    //对空格(32)进行判断,实现提示操作
+    int code = e.getKeyCode();
+    //按住空格,显示完整图片
+    if (code == 32) {
+        //清空界面中的图片
+        this.getContentPane().removeAll();
+        //加载完整图片
+        JLabel all = new JLabel(new ImageIcon(path + "all.jpg"));
+        all.setBounds(83, 134, 420, 420);
+        this.getContentPane().add(all);
+
+        //加载背景图片
+        ImageIcon backgroundImage = new ImageIcon("image/background.png");
+        //创建管理容器
+        JLabel background = new JLabel(backgroundImage);
+        //指定图片位置
+        background.setBounds(40, 40, 508, 560);
+        //将管理容器添加到界面(隐藏容器)当中
+        this.getContentPane().add(background);
+
+        //刷新界面
+        this.getContentPane().repaint();
+    }
+```
+
+重写键盘监听接口的方法:实现松开空格,恢复原状
+
+```java
+//松开空格:恢复原状
+else if (code == 32) {
+    //调用方法按照最新的顺序加载图片
+    initImage();
+}
+```
+
+### 作弊码
+
+重写键盘监听接口的方法:实现按下作弊码Q直接通关
+
+```java
+//作弊码:Q(81)
+else if (code == 81) {
+    //按下Q:直接通关
+    data = win;
+    //调用方法按照最新的顺序加载图片
+    initImage();
+}
+```
+
+### 判断胜利
+
+1.定义方法判断胜利
+
+```java
+//判断data数组中的数据是否跟win数组中的数据一致
+public boolean victory(){
+    for (int i = 0; i < data.length; i++) {
+        for (int j = 0; j < data[i].length; j++) {
+            if(data[i][j] != win[i][j]){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+```
+
+2.在初始化图片前,先判断是否胜利
+
+```java
+//判断data数组和win数组的数据是否一致
+if (victory()) {
+    //显示胜利的图标
+    JLabel jLabel = new JLabel(new ImageIcon("image/win.png"));
+    //指定图片位置
+    jLabel.setBounds(203, 283, 197, 73);
+    //将管理容器添加到界面(隐藏容器)当中
+    this.getContentPane().add(jLabel);
+}
+```
+
+3.在重写键盘监听接口的方法中,移动代码前,先判断是否胜利
+
+```java
+//判断游戏是否胜利
+//如果胜利,则此方法需要结束,不能再执行移动代码
+if (victory()) {
+    //结束方法
+    return;
+}
+```
+
+### 计步器
+
+1.定义成员变量计步
+
+```java
+//定义一个计步器
+int step = 0;
+```
+
+2.初始化图片时,添加计步器到界面上
+
+```java
+//显示步数的文字
+JLabel stepCount = new JLabel("步数:"+step);
+//指定文字位置
+stepCount.setBounds(50, 30, 100, 20);
+//将管理容器添加到界面(隐藏容器)当中
+this.getContentPane().add(stepCount);
+```
+
+3.在重写键盘监听接口的方法中,控制上下左右时,实现计步
+
+```java
+//移动一次,计数器自增一次
+step++;
 ```
 
 ## 事件
