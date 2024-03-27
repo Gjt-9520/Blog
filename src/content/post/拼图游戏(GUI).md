@@ -9,6 +9,8 @@ tags: ["java基础","java","GUI","项目"]
 
 是指采用图形化的方式显示操作界面
 
+[拼图游戏(GUI)](https://github.com/Gjt-9520/PuzzleGame)
+
 ## 需求分析
 
 ### 创建界面
