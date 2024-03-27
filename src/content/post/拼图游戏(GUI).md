@@ -383,10 +383,10 @@ for (int i = 0; i < tempArr.length; i++) {
     if (tempArr[i] == 0) {
         zeroX = i / 4;
         zeroY = i % 4;
-    } else {
-        //将一维数组中索引0~3,4~7,8~11,12~15的元素分别添加到二维数组中
-        data[i / 4][i % 4] = tempArr[i];
-    }
+    } 
+    //将一维数组中索引0~3,4~7,8~11,12~15的元素分别添加到二维数组中
+    data[i / 4][i % 4] = tempArr[i];
+
 }
 ```
 
@@ -512,7 +512,12 @@ else if (code == 32) {
 //作弊码:Q(81)
 else if (code == 81) {
     //按下Q:直接通关
-    data = win;
+    data = new int[][]{
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 0}
+    };
     //调用方法按照最新的顺序加载图片
     initImage();
 }
@@ -588,11 +593,89 @@ this.getContentPane().add(stepCount);
 step++;
 ```
 
-### 重新开始
+### 重新游戏
 
+1.菜单条目绑定事件
 
+```java
+//给菜单条目绑定事件
+rePlayItem.addActionListener(this);
+reLoginItem.addActionListener(this);
+accountItem.addActionListener(this);
+```
 
+2.在重写动作监听接口的方法中,实现重新游戏
 
+```java
+//动作监听ActionListener接口重写方法
+@Override
+public void actionPerformed(ActionEvent e) {
+    //获取当前被操作的条目对象
+    Object obj = e.getSource();
+    //重新游戏
+    if (obj == rePlayItem) {
+        //计步器清零
+        step = 0;
+        //初始化数据(打乱图片顺序)
+        initData();
+        //调用方法按照最新的顺序加载图片
+        initImage();
+        
+        //重新登录
+    } else if (obj == reLoginItem) {
+
+        //玩法介绍
+    } else if (obj == accountItem) {
+
+    }
+}
+```
+
+### 重新登录
+
+在重写动作监听接口的方法中,实现重新登录
+
+```java
+//重新登录
+else if (obj == reLoginItem) {
+    //关闭当前的游戏界面
+    this.setVisible(false);
+    //打开登录界面
+    new LoginJFrame();
+}
+```
+
+### 玩法介绍
+
+在重写动作监听接口的方法中,实现玩法介绍
+
+```java
+//玩法介绍
+else if (obj == accountItem) {
+    //创建一个弹框对象
+    JDialog jDialog = new JDialog();
+    //创建一个管理图片的容器对象
+    JLabel jLabel = new JLabel(new ImageIcon("image/GameIntroduction.png"));
+    //设置位置(相对于弹框)和宽高
+    jLabel.setBounds(0,0,258,258);
+    //把图片添加到弹框当中
+    jDialog.getContentPane().add(jLabel);
+    //给弹框设置大小
+    jDialog.setSize(288,288);
+    //让弹框置顶
+    jDialog.setAlwaysOnTop(true);
+    //让弹框居中
+    jDialog.setLocationRelativeTo(null);
+    //弹框不关闭,则无法操作下面的界面
+    jDialog.setModal(true);
+    //显示弹框
+    jDialog.setVisible(true);
+}
+```
+
+### 切换图片
+
+### 登录界面
 
 ## 事件
 

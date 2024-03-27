@@ -398,74 +398,34 @@ public class User {
         this.phone = phone;
     }
 
-    /**
-     * 获取
-     *
-     * @return username
-     */
     public String getUsername() {
         return username;
     }
 
-    /**
-     * 设置
-     *
-     * @param username
-     */
     public void setUsername(String username) {
         this.username = username;
     }
 
-    /**
-     * 获取
-     *
-     * @return password
-     */
     public String getPassword() {
         return password;
     }
 
-    /**
-     * 设置
-     *
-     * @param password
-     */
     public void setPassword(String password) {
         this.password = password;
     }
 
-    /**
-     * 获取
-     *
-     * @return identity
-     */
     public String getIdentity() {
         return identity;
     }
 
-    /**
-     * 设置
-     *
-     * @param identity
-     */
     public void setIdentity(String identity) {
         this.identity = identity;
     }
 
-    /**
-     * 获取
-     *
-     * @return phone
-     */
     public String getPhone() {
         return phone;
     }
 
-    /**
-     * 设置
-     *
-     * @param phone
-     */
     public void setPhone(String phone) {
         this.phone = phone;
     }
@@ -489,74 +449,34 @@ public class Student {
         this.address = address;
     }
 
-    /**
-     * 获取
-     *
-     * @return id
-     */
     public String getId() {
         return id;
     }
 
-    /**
-     * 设置
-     *
-     * @param id
-     */
     public void setId(String id) {
         this.id = id;
     }
 
-    /**
-     * 获取
-     *
-     * @return name
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     * 设置
-     *
-     * @param name
-     */
     public void setName(String name) {
         this.name = name;
     }
 
-    /**
-     * 获取
-     *
-     * @return age
-     */
     public int getAge() {
         return age;
     }
 
-    /**
-     * 设置
-     *
-     * @param age
-     */
     public void setAge(int age) {
         this.age = age;
     }
 
-    /**
-     * 获取
-     *
-     * @return address
-     */
     public String getAddress() {
         return address;
     }
 
-    /**
-     * 设置
-     *
-     * @param address
-     */
     public void setAddress(String address) {
         this.address = address;
     }
@@ -581,8 +501,8 @@ public class StudentSystem {
         Scanner scanner = new Scanner(System.in);
         //定义用户集合
         ArrayList<User> list = new ArrayList<>();
-        User user1 = new User("admin01", "123", "321283200102055410", "15195209909");
-        User user2 = new User("admin02", "123", "321283200102055410", "15195209909");
+        User user1 = new User("admin01", "123", "321283200102055510", "15195209900");
+        User user2 = new User("admin02", "123", "321283200102055510", "15195209900");
         list.add(user1);
         list.add(user2);
         while (true) {

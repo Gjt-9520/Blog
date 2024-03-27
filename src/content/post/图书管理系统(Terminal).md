@@ -46,74 +46,34 @@ public class Book {
         this.price = price;
     }
 
-    /**
-     * 获取
-     *
-     * @return id
-     */
     public String getId() {
         return id;
     }
 
-    /**
-     * 设置
-     *
-     * @param id
-     */
     public void setId(String id) {
         this.id = id;
     }
 
-    /**
-     * 获取
-     *
-     * @return name
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     * 设置
-     *
-     * @param name
-     */
     public void setName(String name) {
         this.name = name;
     }
 
-    /**
-     * 获取
-     *
-     * @return author
-     */
     public String getAuthor() {
         return author;
     }
 
-    /**
-     * 设置
-     *
-     * @param author
-     */
     public void setAuthor(String author) {
         this.author = author;
     }
 
-    /**
-     * 获取
-     *
-     * @return price
-     */
     public double getPrice() {
         return price;
     }
 
-    /**
-     * 设置
-     *
-     * @param price
-     */
     public void setPrice(double price) {
         this.price = price;
     }
@@ -168,14 +128,13 @@ public class Library {
     public static void addBook(ArrayList<Book> list) {
         Scanner sc = new Scanner(System.in);
         Book book = new Book();
-        addBook:
         while (true) {
             System.out.println("请输入要添加的图书编号:");
             String id = sc.next();
             if (list.size() == 0) {
                 addBookInformation(list, book, id);
                 System.out.println("图书添加成功!");
-                break addBook;
+                break;
             } else {
                 int index = getIndex(list, id);
                 if (getCheck(index)) {
@@ -183,7 +142,7 @@ public class Library {
                 } else {
                     addBookInformation(list, book, id);
                     System.out.println("图书添加成功!");
-                    break addBook;
+                    break;
                 }
             }
         }
@@ -250,7 +209,6 @@ public class Library {
     //查询单本图书信息
     public static void queryOneBook(ArrayList<Book> list) {
         Scanner sc = new Scanner(System.in);
-        queryOne:
         while (true) {
             System.out.println("请输入查询的图书编号:");
             String id = sc.next();
@@ -259,7 +217,7 @@ public class Library {
                 Book book = list.get(index);
                 System.out.println("编号\t\t书名\t\t作者\t\t价格");
                 System.out.println(book.getId() + "\t" + book.getName() + "\t" + book.getAuthor() + "\t" + book.getPrice());
-                break queryOne;
+                break;
             } else {
                 System.out.println("图书id不存在,请重新输入!");
             }
@@ -269,8 +227,7 @@ public class Library {
     //查询所有图书信息
     public static void queryAllBook(ArrayList<Book> list) {
         System.out.println("编号\t\t书名\t\t作者\t\t价格");
-        for (int i = 0; i < list.size(); i++) {
-            Book book = list.get(i);
+        for (Book book : list) {
             System.out.println(book.getId() + "\t" + book.getName() + "\t" + book.getAuthor() + "\t" + book.getPrice());
         }
     }
@@ -278,7 +235,6 @@ public class Library {
     //删除图书
     public static void deleteBook(ArrayList<Book> list) {
         Scanner sc = new Scanner(System.in);
-        delete:
         while (true) {
             System.out.println("请输入删除的图书编号:");
             String id = sc.next();
@@ -286,7 +242,7 @@ public class Library {
             if (getCheck(index)) {
                 list.remove(index);
                 System.out.println("图书删除成功!");
-                break delete;
+                break;
             } else {
                 System.out.println("图书id不存在,请重新输入!");
             }
@@ -296,7 +252,6 @@ public class Library {
     //修改图书
     public static void modifyBook(ArrayList<Book> list) {
         Scanner sc = new Scanner(System.in);
-        modify:
         while (true) {
             System.out.println("请输入修改的图书编号:");
             String id = sc.next();
@@ -305,7 +260,7 @@ public class Library {
                 Book book = list.get(index);
                 modifyBookInformation(book);
                 System.out.println("图书修改成功!");
-                break modify;
+                break;
             } else {
                 System.out.println("图书id不存在,请重新输入!");
             }
