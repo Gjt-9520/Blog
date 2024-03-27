@@ -7,6 +7,8 @@ tags: ["java基础","java","项目"]
 
 ## 需求文档
 
+[学生管理系统(Terminal)](https://github.com/Gjt-9520/StudentSystem)
+
 需求:采取控制台的方式去书写学生管理系统
 
 学生类属性：id、姓名、年龄、家庭住址

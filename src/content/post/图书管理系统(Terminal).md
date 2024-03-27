@@ -7,6 +7,8 @@ tags: ["java基础","java","项目"]
 
 ## 需求文档
 
+[图书管理系统(Terminal)](https://github.com/Gjt-9520/Library)
+
 图书的属性有:编号,书名,作者,价格
 
 要求提供如下功能:
